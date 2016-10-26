@@ -9,12 +9,10 @@ module.config(['$routeProvider', '$httpProvider', 'salteAuthServiceProvider', fu
   }).when("/GithubUsers", {
     controller: "GithubUsers",
     controllerAs: 'vm',
-    templateUrl: "templates/githubUsers.html",
-    requireAuthentication: true
+    templateUrl: "templates/githubUsers.html"
   }).when("/UserProfile", {
     controller: "UserController",
-    templateUrl: "templates/user.html",
-    requireAuthentication: true
+    templateUrl: "templates/user.html"
   }).otherwise({ redirectTo: "/Home" });
 
   salteAuthServiceProvider.init({
@@ -24,7 +22,8 @@ module.config(['$routeProvider', '$httpProvider', 'salteAuthServiceProvider', fu
       url: 'https://api.salte.io/',
       redirectUri: 'http://app:9090/',
       securedEndpoints: {"https://api.salte.io/" : "Gateway"},
-      anonymousEndpoints: ['templates']
+      anonymousEndpoints: ['templates'],
+      requireAuthentication: true
     },
     $httpProvider
   );
