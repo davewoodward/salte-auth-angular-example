@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:large">
+        <legend>Github Users</legend>
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <td>Login</td>
+                <td>Type</td>
+                <td>Public Repositories</td>
+                <td>Followers</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in vm.filteredUsers">
+                <td>{{ user.login }}</td>
+                <td>{{ user.type }}</td>
+                <td>{{ user.public_repos }}</td>
+                <td>{{ user.followers }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="panel-footer">
+        <div uib-pagination="" total-items="vm.users.length" items-per-page="vm.numPerPage"
+             current-page="vm.currentPage" max-size="vm.maxSize"
+             boundary-links="true" ng-model="vm.currentPage" ng-change="vm.refreshFilter()">
+        </div>
+    </div>
+</div>

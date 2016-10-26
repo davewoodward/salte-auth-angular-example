@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app='salte-auth-angular-example'>
+  <head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <a class="navbar-brand"
+               href="https://github.com/salte-io/salte-auth-angular" target="_blank">Salte Auth Angular Example</a>
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                     <li><a href="#/Home">Home</a></li>
+                    <li><a href="#/GithubUsers">Github Users</a></li>
+                    <li><a href="#/UserProfile">View User Profile Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular-ui-utils/modules/utils.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="node_modules/salte-auth/dist/salte-auth.js"></script>
+    <script src="node_modules/salte-auth-angular/dist/salte-auth-angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/githubResource.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/githubUsers.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/log.js"></script>
+  </body>
+</html>

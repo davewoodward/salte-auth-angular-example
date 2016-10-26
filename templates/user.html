@@ -1,0 +1,86 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:large">
+        <legend>ID_Token Content</legend>
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+            <tr>
+                <td>Claim Name</td>
+                <td>Claim Value</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Derived Username</td>
+                <td>{{userInfo.userName}}</td>
+            </tr>
+            <tr>
+                <td>sub</td>
+                <td>{{userInfo.profile.sub}}</td>
+            </tr>
+            <tr>
+                <td>aud</td>
+                <td>{{userInfo.profile.aud}}</td>
+            </tr>
+            <tr>
+                <td>iss</td>
+                <td>{{userInfo.profile.iss}}</td>
+            </tr>
+            <tr>
+                <td>iat</td>
+                <td>{{userInfo.profile.iat}}</td>
+            </tr>
+            <tr>
+                <td>nbf</td>
+                <td>{{userInfo.profile.nbf}}</td>
+            </tr>
+            <tr>
+                <td>exp</td>
+                <td>{{userInfo.profile.exp}}</td>
+            </tr>
+            <tr>
+                <td>ver</td>
+                <td>{{userInfo.profile.ver}}</td>
+            </tr>
+            <tr>
+                <td>tid</td>
+                <td>{{userInfo.profile.tid}}</td>
+            </tr>
+            <tr>
+                <td>amr</td>
+                <td>{{userInfo.profile.amr}}</td>
+            </tr>
+            <tr>
+                <td>oid</td>
+                <td>{{userInfo.profile.oid}}</td>
+            </tr>
+            <tr>
+                <td>upn</td>
+                <td>{{userInfo.profile.upn}}</td>
+            </tr>
+            <tr>
+                <td>unique_name</td>
+                <td>{{userInfo.profile.unique_name}}</td>
+            </tr>
+            <tr>
+                <td>given_name</td>
+                <td>{{userInfo.profile.given_name}}</td>
+            </tr>
+            <tr>
+                <td>family_name</td>
+                <td>{{userInfo.profile.family_name}}</td>
+            </tr>
+            <tr>
+                <td>pwd_exp</td>
+                <td>{{userInfo.profile.pwd_exp}}</td>
+            </tr>
+            <tr>
+                <td>pwd_url</td>
+                <td>{{userInfo.profile.pwd_url}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer"></div>
+</div>
