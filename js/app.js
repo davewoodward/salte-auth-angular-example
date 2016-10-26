@@ -18,9 +18,9 @@ module.config(['$routeProvider', '$httpProvider', 'salteAuthServiceProvider', fu
   salteAuthServiceProvider.init({
       responseType: 'id_token',
       scope: 'openid',
-      clientId: 'XE9mdXnr0j2z6_nED5ifDIW4S9oa',
+      clientId: 'QYoBNKhbs1VFW8dJXIqUWR3JBFQa',
       url: 'https://api.salte.io/',
-      redirectUri: 'http://app:9090/',
+      redirectUri: 'http://localhost:9090/',
       securedEndpoints: {"https://api.salte.io/" : "Gateway"},
       anonymousEndpoints: ['templates'],
       requireAuthentication: true
