@@ -15,12 +15,17 @@ module.config(['$routeProvider', '$httpProvider', 'salteAuthServiceProvider', fu
     templateUrl: "templates/user.html"
   }).otherwise({ redirectTo: "/Home" });
 
+  // NOTE: This is for GitHub Pages, you won't have to do this unless you have a specific callback url
+  var redirectUris = {
+    'https://davewoodward.github.io': 'https://davewoodward.github.io/salte-auth-angular-example/'
+  };
+
   salteAuthServiceProvider.init({
       responseType: 'id_token',
       scope: 'openid',
       clientId: 'QYoBNKhbs1VFW8dJXIqUWR3JBFQa',
       url: 'https://api.salte.io/',
-      redirectUri: 'http://localhost:9090/',
+      redirectUri: redirectUris[location.origin] || location.origin,
       securedEndpoints: {"https://api.salte.io/" : "Gateway"},
       anonymousEndpoints: ['templates'],
       requireAuthentication: true
